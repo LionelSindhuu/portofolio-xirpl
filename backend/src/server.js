@@ -52,9 +52,13 @@ app.get('/api/biodata', (req, res) => {
 // --------------------------------------------------
 const profileRoutes = require('./routes/profileRoutes');
 const projectRoutes = require('./routes/projectRoutes'); 
+const skillRoutes = require('./routes/skillRoutes');
+const experiencesRoutes = require('./routes/experiencesRoutes');
 
 app.use('/api/profile', profileRoutes);
-app.use('/api/projects', projectRoutes);               
+app.use('/api/projects', projectRoutes);
+app.use('/api/skills', skillRoutes);
+app.use('/api/experiences', experiencesRoutes );               
 
 // 6. Middleware untuk menangani route yang tidak ditemukan (404 Not Found)
 app.use((req, res) => {
